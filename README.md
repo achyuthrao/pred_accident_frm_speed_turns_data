@@ -16,7 +16,7 @@ The additional features to augment the data matrix should be the following:
 -	the count of stops in the trip [int]
 -	the count of turns (greater than 60 degrees) [int]
 For turns and stops, consider events within 3 seconds of one another to be the same event, and exclude events lasting shorter than 3 seconds. A left turn followed immediately by a right turn (or vise versa) should be treated as two separate turns. To help with building the feature extraction, the trip data corresponding to filename = "0001.csv" should have approximately:
-  - 1 stop
-  - 9 turns
+  1 stop
+  9 turns
 
 The (discrete binary) target variable yi ∈ {0, 1} represents whether the ith trip is “interesting” or not, and the objective of the work sample is to fit a model (using the training data) that can make an accurate prediction yˆ = f (Xa) of y. The model will then be used to generate predictions on the provided test data.
